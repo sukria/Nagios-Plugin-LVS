@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use Nagios::Plugin::LVS;
+
+my $plugin = Nagios::Plugin::LVS->new( shortname => "LVS" );
+my $page   = $plugin->retrieve_page;
+my $stats  = $plugin->test_page($page);
+
