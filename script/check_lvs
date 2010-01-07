@@ -4,6 +4,11 @@ use strict;
 use warnings;
 use Nagios::Plugin::LVS;
 
+# this script is supposed to be setuid root, and ran by perl-suid
+# so we have to secure the PATH
+use vars '%ENV';
+$ENV{PATH} = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin';
+
 my $plugin = Nagios::Plugin::LVS->new( shortname => "LVS" );
 my $page   = $plugin->retrieve_page;
 my $stats  = $plugin->test_page($page);
