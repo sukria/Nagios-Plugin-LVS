@@ -4,6 +4,7 @@ WriteMakefile1(
     NAME         => 'Nagios::Plugin::LVS',
     ABSTRACT     => "Nagios plugin for LVS",
     LICENSE      => 'perl',
+    VERSION_FROM => 'lib/Nagios/Plugin/LVS.pm',
     EXE_FILES    => ['script/check_lvs'],
     
     PREREQ_PM => {

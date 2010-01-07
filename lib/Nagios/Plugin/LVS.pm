@@ -2,6 +2,10 @@ package Nagios::Plugin::LVS;
 
 use strict;
 use warnings;
+use vars '$VERSION', '$AUTHORITY';
+
+$VERSION = '0.001';
+$AUTHORITY = 'SUKRIA';
 
 use Nagios::Plugin; # needed for the constants import
 use base 'Nagios::Plugin';
