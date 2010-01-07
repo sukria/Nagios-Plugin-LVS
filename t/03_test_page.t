@@ -10,10 +10,10 @@ Prot LocalAddress:Port Scheduler Flags
   -> RemoteAddress:Port           Forward Weight ActiveConn InActConn
 TCP  vip.domain.com:https wlc persistent 50
   -> xxx.domain.com:https         Route   1      2          1         
-  -> yyy.weborama.fr:https       Local   2      0          0         
+  -> yyy.domain.com:https       Local   2      0          0         
 TCP  vip.domain.com:www wlc persistent 50
   -> xxx.domain.com:www           Route   1      99         200       
-  -> yyy.weborama.fr:www         Local   2      191        374   
+  -> yyy.domain.com:www         Local   2      191        374   
 ';
 my ($nb_active, $nb_inactive, $stats) = $np->parse_page($page);
 
